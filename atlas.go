@@ -13,6 +13,10 @@ import (
 	"github.com/hashicorp/atlas-go/v1"
 )
 
+var (
+	Version string
+)
+
 func init() {
 	log.SetOutput(ioutil.Discard)
 }
@@ -66,11 +70,12 @@ func search(c *cli.Context) {
 }
 
 func main() {
-	fmt.Println("Search atlas.hashicorp artifacts ...")
+	fmt.Fprintln(os.Stderr, "Search atlas.hashicorp artifacts ...")
 
 	app := cli.NewApp()
 	app.Name = "atlifacts"
 	app.Usage = "query atlas.hashicorp.com artifacts"
+	app.Version = Version
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

@@ -3,7 +3,7 @@ a cli tool for query atlas.hashicorp.com artifacts. It will print each matching 
 ## Install
 
 ```
-curl -L https://github.com/lalyos/atlas/releases/download/v0.0.1/atlas_0.0.1_$(uname)_x86_64.tgz | tar -xz -C /usr/local/bin/ 
+curl -L https://github.com/lalyos/atlas/releases/download/v0.0.2/atlas_0.0.2_$(uname)_x86_64.tgz | tar -xz -C /usr/local/bin/ 
 ```
 
 ## Usage

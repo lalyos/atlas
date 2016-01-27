@@ -30,6 +30,12 @@ func ToJson(obj interface{}) (interface{}, error) {
 }
 
 func search(c *cli.Context) {
+
+	if c.String("user") == "" || c.String("artifact") == "" || c.String("type") == "" {
+		cli.ShowAppHelp(c)
+		os.Exit(1)
+	}
+
 	searchOpts := &atlas.ArtifactSearchOpts{
 		User: c.String("user"),
 		Name: c.String("artifact"),
@@ -80,19 +86,16 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:   "user, u",
-			Value:  "sequenceiq",
 			Usage:  "atlas user",
 			EnvVar: "ATLAS_USER",
 		},
 		cli.StringFlag{
 			Name:   "artifact, a",
-			Value:  "cloudbreak",
 			Usage:  "atlas artifact",
 			EnvVar: "ATLAS_ARTIFACT_NAME",
 		},
 		cli.StringFlag{
 			Name:   "type, t",
-			Value:  "openstack.image",
 			Usage:  "atlas artifact type",
 			EnvVar: "ATLAS_ARTIFACT_TYPE",
 		},

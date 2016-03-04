@@ -1,4 +1,4 @@
-a cli tool for query atlas.hashicorp.com artifacts. It will print each matching atlas artifact version.
+A cli tool for query atlas.hashicorp.com artifacts. It will print each matching atlas artifact version.
 
 ## Install
 
@@ -22,7 +22,7 @@ atlas -u sequenceiq -a cloudbreak -t openstack.image -m cloudbreak_image_version
 
 ## Custom format
 
-You can us e the `--format` or `-f` short option to define a custom template.
+You can use the `--format` or `-f` short option to define a custom template.
 See [ArtifactVersion godoc](https://godoc.org/github.com/hashicorp/atlas-go/v1#ArtifactVersion) for available fields.
 See [pkg/text/template godoc](https://golang.org/pkg/text/template/) to learn about golang template syntax.
 ```

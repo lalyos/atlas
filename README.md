@@ -29,3 +29,7 @@ See [pkg/text/template godoc](https://golang.org/pkg/text/template/) to learn ab
 atlas -u sequenceiq -a docker -t openstack.image -f '{{json .}}'
 ```
 
+## License
+
+MIT
+

@@ -60,7 +60,7 @@ func search(c *cli.Context) {
 
 	fnMap := template.FuncMap{}
 	fnMap["json"] = ToJson
-	tmpl, err := template.New("artifact").Funcs(fnMap).Parse(c.String("format"))
+	tmpl, err := template.New("artifact").Funcs(fnMap).Parse(c.String("format") + "\n")
 	if err != nil {
 		panic(err)
 	}
@@ -101,7 +101,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:  "format, f",
-			Value: "{{.Slug}}\n",
+			Value: "{{.Slug}}",
 			Usage: "output format in golang template",
 		},
 		cli.StringSliceFlag{

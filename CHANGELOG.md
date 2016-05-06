@@ -10,6 +10,15 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+## [0.0.3] - 2016.05.06
+### Fixed
+
+### Added
+
+### Removed
+
+### Changed
+
 - filter debug output goes to stderr
 - each itaration prints a newline
 

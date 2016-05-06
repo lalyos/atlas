@@ -10,4 +10,6 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- filter debug output goes to stderr
+
 ## [0.0.2] - 2016.01.27

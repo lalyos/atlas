@@ -47,7 +47,7 @@ func search(c *cli.Context) {
 			pair := strings.Split(m, "=")
 			filter[pair[0]] = pair[1]
 		}
-		fmt.Printf("FILTER: %#v\n", filter)
+		fmt.Fprintf(os.Stderr, "FILTER: %#v\n", filter)
 		searchOpts.Metadata = filter
 	}
 	client := atlas.DefaultClient()

@@ -65,6 +65,9 @@ func search(c *cli.Context) {
 		panic(err)
 	}
 
+	if c.Bool("last") {
+		versions = versions[:1]
+	}
 	for _, v := range versions {
 		//fmt.Println("ver: %#v", v)
 		err = tmpl.Execute(os.Stdout, v)
@@ -107,6 +110,10 @@ func main() {
 		cli.StringSliceFlag{
 			Name:  "meta, m",
 			Usage: "meta field as filter",
+		},
+		cli.BoolFlag{
+			Name:  "last, l",
+			Usage: "only show the latest version",
 		},
 	}
 	app.Action = search

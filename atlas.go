@@ -104,7 +104,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:  "format, f",
-			Value: "{{.Slug}}",
+			Value: "{{json .}}",
 			Usage: "output format in golang template",
 		},
 		cli.StringSliceFlag{

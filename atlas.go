@@ -106,7 +106,7 @@ func main() {
 		},
 		cli.StringSliceFlag{
 			Name:  "meta, m",
-			Usage: "meta field as fielter",
+			Usage: "meta field as filter",
 		},
 	}
 	app.Action = search

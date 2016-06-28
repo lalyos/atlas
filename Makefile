@@ -3,7 +3,7 @@ VERSION=0.0.4
 build:
 	glu build linux,darwin
 
-release:
+release: build
 	glu release
 
 install: build

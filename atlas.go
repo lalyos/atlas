@@ -22,7 +22,7 @@ func init() {
 }
 
 func ToJson(obj interface{}) (interface{}, error) {
-	data, err := json.Marshal(obj)
+	data, err := json.MarshalIndent(obj, "", "    ")
 	if err != nil {
 		return nil, err
 	}

@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 ### Added
+
+### Removed
+
+### Changed
+
+## [0.0.5] - 1016.07.01
+### Fixed
+
+### Added
 - New template functions: add, subtract
 
 ### Removed

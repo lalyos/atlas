@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 ### Removed
+- Initial debug message from stderr is removed
 
 ### Changed
 

@@ -79,8 +79,6 @@ func search(c *cli.Context) {
 }
 
 func main() {
-	fmt.Fprintln(os.Stderr, "Search atlas.hashicorp artifacts ...")
-
 	app := cli.NewApp()
 	app.Name = "atlifacts"
 	app.Usage = "query atlas.hashicorp.com artifacts"

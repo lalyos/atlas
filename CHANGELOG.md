@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - New template functions: add, subtract
+- Single parameter version added: `--slug` or `-s`
 
 ### Removed
 - Initial debug message from stderr is removed

@@ -120,7 +120,7 @@ func subtract(b, a interface{}) (interface{}, error) {
 
 func search(c *cli.Context) {
 
-	if c.String("user") == "" || c.String("artifact") == "" || c.String("type") == "" {
+	if c.String("slug") == "" && (c.String("user") == "" || c.String("artifact") == "" || c.String("type") == "") {
 		cli.ShowAppHelp(c)
 		os.Exit(1)
 	}
@@ -129,6 +129,14 @@ func search(c *cli.Context) {
 		User: c.String("user"),
 		Name: c.String("artifact"),
 		Type: c.String("type"),
+	}
+	if c.String("slug") != "" {
+		sp := strings.Split(c.String("slug"), "/")
+		searchOpts = &atlas.ArtifactSearchOpts{
+			User: sp[0],
+			Name: sp[1],
+			Type: sp[2],
+		}
 	}
 	if len(c.StringSlice("meta")) > 0 {
 		filter := map[string]string{}
@@ -190,6 +198,11 @@ func main() {
 			Name:   "type, t",
 			Usage:  "atlas artifact type",
 			EnvVar: "ATLAS_ARTIFACT_TYPE",
+		},
+		cli.StringFlag{
+			Name:   "slug, s",
+			Usage:  "atlas slug: user/artifact/type",
+			EnvVar: "ATLAS_SLUG",
 		},
 		cli.StringFlag{
 			Name:  "format, f",

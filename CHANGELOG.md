@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 ### Added
+- New template functions: add, subtract
 
 ### Removed
 - Initial debug message from stderr is removed

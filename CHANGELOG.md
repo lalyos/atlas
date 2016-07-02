@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-## [0.0.5] - 1016.07.01
+## [0.0.5] - 2016.07.01
 ### Fixed
 
 ### Added
